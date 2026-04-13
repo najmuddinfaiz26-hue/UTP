@@ -27,16 +27,16 @@ abstract class Member {
     public int buy(String layanan, int sesi) {
         int hargaDasar = 0;
         switch (layanan) {
-            case "cardio": hargaDasar = 20000; break;
-            case "yoga": hargaDasar = 25000; break;
-            case "personal_training": hargaDasar = 40000; break;
-            default: 
-                System.out.println("Layanan tidak valid");
-                return -1;
+        case "cardio": hargaDasar = 20000; break;
+        case "yoga": hargaDasar = 25000; break;
+         case "personal_training": hargaDasar = 40000; break;
+         default: 
+          System.out.println("Layanan tidak valid");
+         return -1;
         }
 
         int total = hitungPembayaran(hargaDasar, sesi);
-
+        
         if (saldo < total) {
             System.out.println("Saldo " + id + " tidak cukup");
             return -1;
