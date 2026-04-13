@@ -8,7 +8,7 @@ class GymSystem {
 
     public void addMember(String tipe, String id, String nama) {
         if (findMember(id) != null) {
-            System.out.println("Member sudah terdaftar");
+         System.out.println("Member sudah terdaftar");
             return;
         }
 
@@ -18,7 +18,7 @@ class GymSystem {
         } else if (tipe.equalsIgnoreCase("VIP")) {
             m = new VIP(id, nama);
         } else {
-            System.out.println("Tipe member tidak valid");
+         System.out.println("Tipe member tidak valid");
             return;
         }
 
@@ -29,7 +29,7 @@ class GymSystem {
     public void topUp(String id, int jumlah) {
         Member m = findMember(id);
         if (m == null) {
-            System.out.println("Member tidak ditemukan");
+        System.out.println("Member tidak ditemukan");
             return;
         }
         m.topUp(jumlah);
@@ -39,7 +39,7 @@ class GymSystem {
     public void buy(String id, String layanan, int sesi) {
         Member m = findMember(id);
         if (m == null) {
-            System.out.println("Member tidak ditemukan");
+        System.out.println("Member tidak ditemukan");
             return;
         }
         m.buy(layanan, sesi);
@@ -48,8 +48,8 @@ class GymSystem {
     public void check(String id) {
         Member m = findMember(id);
         if (m == null) {
-            System.out.println("Member tidak ditemukan");
-            return;
+        System.out.println("Member tidak ditemukan");
+        return;
         }
         System.out.println(m.getInfo());
     }
@@ -60,7 +60,7 @@ class GymSystem {
 
     public Member findMember(String id) {
         for (Member m : members) {
-            if (m.id.equals(id)) return m;
+         if (m.id.equals(id)) return m;
         }
         return null;
     }
