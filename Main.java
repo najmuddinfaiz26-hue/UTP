@@ -13,12 +13,11 @@ public class Main {
         for (int i = 0; i < N; i++) {
             String line = sc.nextLine();
             String[] parts = line.split(" ");
-
             String cmd = parts[0];
 
             switch (cmd) {
                 case "ADD":
-                   
+             
                     String tipe = parts[1];
                     String id = parts[2];
                     String nama = parts[3];
